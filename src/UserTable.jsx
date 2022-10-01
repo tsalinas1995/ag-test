@@ -3,6 +3,7 @@
 import {MDBTable, MDBIcon } from 'mdb-react-ui-kit';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
+import { Pencil } from "react-bootstrap-icons";
 import 'mdbreact/dist/css/mdb.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -29,7 +30,7 @@ const UserTable = ({users, saveUser}) =>{
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>      
-                    <th>Edit</th>      
+                    <th></th>      
                 </tr>
             </thead>
            {users.map((user) =>
@@ -39,7 +40,11 @@ const UserTable = ({users, saveUser}) =>{
                 <td>{user.first_name}</td>
                 <td>{user.last_name}</td>
                 <td>{user.email}</td>
-                <td><a onClick={()=> handleShow(user)}><MDBIcon fas icon="brush" /></a></td>
+                <td>                    
+                <Button variant="success"onClick={()=> handleShow(user)}>          
+                    Edit
+                </Button>        
+                    </td>
             </tr>
             </tbody>
            )}
