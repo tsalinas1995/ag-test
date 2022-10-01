@@ -29,17 +29,16 @@ const UserTable = ({users, saveUser}) =>{
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>      
-                    <th>Edit</th>      
+                      
                 </tr>
             </thead>
            {users.map((user) =>
            <tbody>
             <tr>
-                <td>{user.id}</td>
+                <td><a onClick={()=> handleShow(user)}>{user.id}</a></td>
                 <td>{user.first_name}</td>
                 <td>{user.last_name}</td>
-                <td>{user.email}</td>
-                <td><a onClick={()=> handleShow(user)}><MDBIcon fas icon="brush" /></a></td>
+                <td>{user.email}</td>                
             </tr>
             </tbody>
            )}
