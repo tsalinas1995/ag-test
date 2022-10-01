@@ -1,12 +1,6 @@
 
-
-import {MDBTable, MDBIcon } from 'mdb-react-ui-kit';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
-import { Pencil } from "react-bootstrap-icons";
-import 'mdbreact/dist/css/mdb.css';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import React, { useState } from 'react';
 import UserModal from './UserModal';
 
@@ -23,7 +17,7 @@ const UserTable = ({users, saveUser}) =>{
     
     return(
         <>
-        <MDBTable hover className="customTable">
+        <table className="table customTable">
             <thead>
                 <tr>           
                     <th>Id</th>
@@ -48,7 +42,7 @@ const UserTable = ({users, saveUser}) =>{
             </tr>
             </tbody>
            )}
-         </MDBTable>
+         </table>
                <UserModal userInfo={selectedUser} show={show} handleClose={handleClose} handleShow={handleShow} saveUser={saveUser}/>
              </>
     )
