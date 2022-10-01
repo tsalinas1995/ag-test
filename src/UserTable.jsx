@@ -29,7 +29,7 @@ const UserTable = ({users, saveUser}) =>{
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>      
-                      
+                    <th>Edit</th>      
                 </tr>
             </thead>
            {users.map((user) =>
@@ -38,7 +38,8 @@ const UserTable = ({users, saveUser}) =>{
                 <td><a onClick={()=> handleShow(user)}>{user.id}</a></td>
                 <td>{user.first_name}</td>
                 <td>{user.last_name}</td>
-                <td>{user.email}</td>                
+                <td>{user.email}</td>
+                <td><a onClick={()=> handleShow(user)}><MDBIcon fas icon="brush" /></a></td>
             </tr>
             </tbody>
            )}
